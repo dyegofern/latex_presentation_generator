@@ -197,10 +197,13 @@ If you use this tool in your research or project, please cite it as:
 
 ```bibtex
 @software{presentation_generator,
-  author = {Dyego Fernandes de Sousa},
+  author = {de Sousa, Dyego Fernandes},
   title = {Presentation Generator: A Generic Beamer Presentation Generator from Jupyter Notebooks},
   year = {2025},
-  url = {https://github.com/dyegofern/latex_presentation_generator}
+  month = {10},
+  publisher = {GitHub},
+  url = {https://github.com/dyegofern/latex_presentation_generator},
+  version = {1.0.0}
 }
 ```
 
