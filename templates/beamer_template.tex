@@ -1,0 +1,141 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Theme and Color Scheme
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% {{UNIVERSITY_NAME}} Colors
+\definecolor{PrimaryColor}{RGB}{{{PRIMARY_R}},{{PRIMARY_G}},{{PRIMARY_B}}}
+\definecolor{SecondaryColor}{RGB}{{{SECONDARY_R}},{{SECONDARY_G}},{{SECONDARY_B}}}
+\definecolor{TertiaryColor}{RGB}{{{TERTIARY_R}},{{TERTIARY_G}},{{TERTIARY_B}}}
+\definecolor{QuaternaryColor}{RGB}{{{QUATERNARY_R}},{{QUATERNARY_G}},{{QUATERNARY_B}}}
+
+% Apply color scheme
+\setbeamercolor{palette primary}{bg=PrimaryColor,fg=black}
+\setbeamercolor{palette secondary}{bg=TertiaryColor,fg=white}
+\setbeamercolor{palette tertiary}{bg=SecondaryColor,fg=PrimaryColor}
+\setbeamercolor{palette quaternary}{bg=PrimaryColor,fg=black}
+\setbeamercolor{structure}{fg=SecondaryColor}
+\setbeamercolor{section in toc}{fg=SecondaryColor}
+\setbeamercolor{subsection in head/foot}{bg=TertiaryColor,fg=white}
+
+% Title colors
+\setbeamercolor{title}{fg=PrimaryColor,bg=SecondaryColor}
+\setbeamercolor{frametitle}{fg=black,bg=PrimaryColor}
+
+% Block colors
+\setbeamercolor{block title}{bg=PrimaryColor,fg=black}
+\setbeamercolor{block body}{bg=QuaternaryColor!20,fg=black}
+
+% Alert block colors
+\setbeamercolor{block title alerted}{bg=SecondaryColor,fg=PrimaryColor}
+\setbeamercolor{block body alerted}{bg=TertiaryColor!20,fg=black}
+
+% Item colors
+\setbeamercolor{item}{fg=PrimaryColor}
+\setbeamercolor{subitem}{fg=TertiaryColor}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Configure listings to handle UTF-8
+\lstset{
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+        {²}{{\textsuperscript{2}}}1
+        {³}{{\textsuperscript{3}}}1
+        {°}{{\textdegree}}1
+        {±}{{\textpm}}1
+        {×}{{\texttimes}}1
+        {÷}{{\textdiv}}1
+        {≤}{{\leq}}1
+        {≥}{{\geq}}1
+        {≠}{{\neq}}1
+        {∞}{{\infty}}1
+}
+
+% Define CODE macro for Python code
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!50!black}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    escapeinside={(*@}{@*)},
+    xleftmargin=0.5cm,
+    xrightmargin=0.5cm,
+    inputencoding=utf8,
+    extendedchars=true
+}
+
+\lstset{style=pythonstyle}
+
+% CODE macro to include external Python files
+\newcommand{\CODE}[1]{\lstinputlisting{assets/code/#1}}
+
+% Title Information
+\title{{{TITLE}}}
+{{SUBTITLE}}
+\author{{{AUTHOR}}}
+\institute{{{INSTITUTE}}}
+\date{\today}
+
+% Logo on title page
+\titlegraphic{\includegraphics[height=1.5cm]{assets/logos/{{LOGO_FILE}}}}
+
+% Footer customization
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+% Title Slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Table of Contents
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+{{CONTENT}}
+
+\end{document}

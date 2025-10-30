@@ -1,4 +1,9 @@
-# Presentation Generator
+# LaTeX Beamer Presentation Generator
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)
+![Python](https://img.shields.io/badge/python-3.6+-blue.svg)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)
 
 A generic Beamer presentation generator that extracts content from Jupyter notebooks and creates LaTeX presentations with customizable university themes.
 
@@ -38,12 +43,20 @@ presentation_generator/
 
 ## Installation
 
-1. **Requirements**:
+### Quick Start
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/dyegofern/latex_presentation_generator.git
+   cd latex_presentation_generator
+   ```
+
+2. **Requirements**:
    - Python 3.6+
    - LaTeX distribution (TeX Live, MiKTeX, or MacTeX)
    - Standard Python libraries (json, base64, pathlib)
 
-2. **Optional - Download University Logos**:
+3. **Optional - Download University Logos**:
    - See `assets/logos/README.md` for official logo sources
    - Logos should be PNG or SVG format
    - Place in `assets/logos/` directory
@@ -185,11 +198,19 @@ Use the `\CODE{}` macro in LaTeX to include code:
 2. **Notebook not found**: Check notebook path is correct
 3. **Permission errors**: Ensure write permissions for output directory
 
+## Contributing
+
+Contributions are welcome! If you find a bug or have a feature request, please:
+- Open an issue at [GitHub Issues](https://github.com/dyegofern/latex_presentation_generator/issues)
+- Submit a pull request with your improvements
+
 ## License
 
-This tool is provided as-is for academic and educational use.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-Official university logos and colors are property of their respective institutions.
+Copyright (c) 2025 Dyego Fernandes de Sousa
+
+**Note**: Official university logos and colors are property of their respective institutions.
 
 ## Citation
 
