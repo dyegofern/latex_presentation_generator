@@ -1,4 +1,4 @@
-# Presentation Generator
+# LaTeX Beamer Presentation Generator
 
 A generic Beamer presentation generator that extracts content from Jupyter notebooks and creates LaTeX presentations with customizable university themes.
 
