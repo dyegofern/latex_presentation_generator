@@ -1,4 +1,4 @@
-# LaTeX Beamer Presentation Generator
+# Presentation Generator
 
 A generic Beamer presentation generator that extracts content from Jupyter notebooks and creates LaTeX presentations with customizable university themes.
 
@@ -189,12 +189,24 @@ Use the `\CODE{}` macro in LaTeX to include code:
 
 This tool is provided as-is for academic and educational use.
 
-## Credits
-
-Supports presentations for:
-- University of Colorado Boulder
-- Massachusetts Institute of Technology
-- Stanford University
-- Florida International University
-
 Official university logos and colors are property of their respective institutions.
+
+## Citation
+
+If you use this tool in your research or project, please cite it as:
+
+```bibtex
+@software{presentation_generator,
+  author = {Dyego Fernandes de Sousa},
+  title = {Presentation Generator: A Generic Beamer Presentation Generator from Jupyter Notebooks},
+  year = {2025},
+  url = {https://github.com/dyegofern/latex_presentation_generator}
+}
+```
+
+Or use the following text citation:
+
+```
+Presentation Generator: A Generic Beamer Presentation Generator from Jupyter Notebooks.
+Available at: https://github.com/dyegofern/latex_presentation_generator
+```
